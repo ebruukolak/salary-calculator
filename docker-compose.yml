@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  salarycalculation.api:
+    image: ${DOCKER_REGISTRY-}salarycalculation
+    build:
+      context: .
+      dockerfile: SalaryCalculation.Api/Dockerfile

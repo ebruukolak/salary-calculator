@@ -11,7 +11,10 @@ namespace SalaryCalculation.Business.Concretes
 
         public decimal Calculate(Employee employee)
         {
-            return (employee.WorkingDays * employee.DailyRate) + (employee.ShiftHours * employee.ShiftRate);
+            if(employee.WorkingDays.HasValue && employee.DailyRate.HasValue && employee.ShiftHours.HasValue && employee.ShiftRate.HasValue)
+            return (employee.WorkingDays.Value * employee.DailyRate.Value) + (employee.ShiftHours.Value * employee.ShiftRate.Value);
+
+            return 0;
         }
     }
 }

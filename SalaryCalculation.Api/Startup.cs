@@ -50,9 +50,16 @@ namespace SalaryCalculation.Api
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
+            /*app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });*/
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Employee}/{action=GetEmployees}");
             });
         }
     }

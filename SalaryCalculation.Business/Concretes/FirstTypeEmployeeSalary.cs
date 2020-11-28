@@ -11,7 +11,7 @@ namespace SalaryCalculation.Business.Concretes
 
         public decimal Calculate(Employee employee)
         {
-            return employee.HourlyRate * employee.WorkingHours;
+            return employee.Salary.HasValue ? employee.Salary.Value : 0;
         }
     }
 }

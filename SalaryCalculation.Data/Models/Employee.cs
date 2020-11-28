@@ -9,11 +9,10 @@ namespace SalaryCalculation.Data.Models
         public string Name { get; set; }
         public string Surname { get; set; }
         public EmployeeType Type { get; set; }
-        public int WorkingHours { get; set; }
-        public int HourlyRate { get; set; }
-        public int WorkingDays { get; set; }
-        public int DailyRate { get; set; }
-        public int ShiftHours { get; set; }
-        public int ShiftRate { get; set; }
+        public decimal? Salary { get; set; }
+        public int? WorkingDays { get; set; }
+        public int? DailyRate { get; set; }
+        public int? ShiftHours { get; set; }
+        public int? ShiftRate { get; set; }
     }
 }

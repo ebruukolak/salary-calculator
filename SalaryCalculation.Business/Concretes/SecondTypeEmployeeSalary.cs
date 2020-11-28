@@ -11,7 +11,9 @@ namespace SalaryCalculation.Business.Concretes
 
         public decimal Calculate(Employee employee)
         {
-            return employee.WorkingDays * employee.DailyRate;
+            if(employee.WorkingDays.HasValue && employee.DailyRate.HasValue)
+            return employee.WorkingDays.Value * employee.DailyRate.Value;
+            return 0;
         }
     }
 }
